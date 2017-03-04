@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="photoshare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qpS-Tj-kRn"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eN-PL-dOb">
+                                <state key="normal" title="Choose Image..."/>
+                                <connections>
+                                    <action selector="chooseButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wby-cG-fuO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-Hb-bLO">
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jm6-w8-pPW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qpS-Tj-kRn" firstAttribute="top" secondItem="8eN-PL-dOb" secondAttribute="bottom" constant="15" id="1Jd-Jg-Wv6"/>
+                            <constraint firstItem="qpS-Tj-kRn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wtp-s8-zWY"/>
+                            <constraint firstItem="qpS-Tj-kRn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="ajK-ag-iSq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qpS-Tj-kRn" secondAttribute="trailing" id="cHh-W6-SYS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qpS-Tj-kRn" secondAttribute="bottom" id="cnl-i8-7Iw"/>
+                            <constraint firstItem="qpS-Tj-kRn" firstAttribute="top" secondItem="oFF-Hb-bLO" secondAttribute="bottom" constant="15" id="kYk-PE-3xr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oFF-Hb-bLO" secondAttribute="trailing" id="qe6-ws-9jq"/>
+                            <constraint firstItem="8eN-PL-dOb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ueU-tE-W84"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="qpS-Tj-kRn" id="PO3-HK-Sa8"/>
+                        <outlet property="shareButton" destination="oFF-Hb-bLO" id="gNF-gL-GQ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="119.1904047976012"/>
+        </scene>
+    </scenes>
+</document>
